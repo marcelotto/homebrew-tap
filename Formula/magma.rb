@@ -1,28 +1,28 @@
 class Magma < Formula
   desc "LLM-powered prompt development environment"
   homepage "https://github.com/marcelotto/magma"
-  version "0.3.1"
+  version "0.3.2"
   license "MIT"
 
   depends_on "pandoc"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/marcelotto/magma/releases/download/v0.3.1/magma_macos_arm"
-      sha256 "27ae4474ac10722bbef43e1272a06c8dacfb9d63b2254069da97cba3bef20a8e"
+      url "https://github.com/marcelotto/magma/releases/download/v0.3.2/magma_macos_arm"
+      sha256 "59dc22cea30d98b1951e9b80a736bc6b4e2a6df174c837dfa38e2efd7399921e"
     else
-      url "https://github.com/marcelotto/magma/releases/download/v0.3.1/magma_macos_intel"
-      sha256 "85a8f36e629634ed684bcf4e334a669532a09bc53abf82ae39446fa9dd2ba9f4"
+      url "https://github.com/marcelotto/magma/releases/download/v0.3.2/magma_macos_intel"
+      sha256 "ef1fb2e6a10bad7c8f77c1efd11df9c5e71c80f0ddaad56ace3b820850adfbc4"
     end
   end
 
   on_linux do
     if Hardware::CPU.arm?
-      url "https://github.com/marcelotto/magma/releases/download/v0.3.1/magma_linux_arm"
-      sha256 "efd87ab46c3e2231ee6663395af7db0b3c7179eda1f40e18ded7722cbf8076fb"
+      url "https://github.com/marcelotto/magma/releases/download/v0.3.2/magma_linux_arm"
+      sha256 "60e71f20a4eb03893d818d022561021d40737b68fd247562ff445c97ee86c7eb"
     else
-      url "https://github.com/marcelotto/magma/releases/download/v0.3.1/magma_linux_intel"
-      sha256 "68125d4b0b287d1100d643a7f0529cffafb4535246594e0bcdc43ad985bb5acf"
+      url "https://github.com/marcelotto/magma/releases/download/v0.3.2/magma_linux_intel"
+      sha256 "b293dc939a15b12fc61c0c9e0192ed5659e2e7ce952059d5608671a5c854aac7"
     end
   end
 
@@ -32,6 +32,6 @@ class Magma < Formula
   end
 
   test do
-    assert_match "Magma v0.3.1", shell_output("#{bin}/magma version")
+    assert_match "Magma v0.3.2", shell_output("#{bin}/magma version")
   end
 end
